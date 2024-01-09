@@ -7,11 +7,11 @@ load_dotenv()
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'neondb',
+    'NAME': os.getenv("NAME"),
     'USER': os.getenv("USER"),
     'PASSWORD': os.getenv("PASS"),
-    'HOST': 'ep-plain-limit-71331214.ap-southeast-1.aws.neon.tech',
-    'PORT': '5432',
+    'HOST': os.getenv("HOST"),
+    'PORT': os.getenv("PORT"),
     'OPTIONS': {'sslmode': 'require'},
   }
 }
