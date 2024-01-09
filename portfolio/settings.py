@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # }
 
 from .db import *  # NOQA
-DATABASES = DATABASES
+
 
 
 # Password validation
