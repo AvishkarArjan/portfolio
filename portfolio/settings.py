@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-8-(3m_znozn09pr^00ijh^y#f+cs!hah5p@os$t!nmlxmz+93k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-CSRF_TRUSTED_ORIGINS = ["https://*.telebit.io"]
+ALLOWED_HOSTS = ["*.vercel.app"]
+# CSRF_TRUSTED_ORIGINS = ["https://*.telebit.io"]
 
 # Application definition
 
