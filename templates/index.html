@@ -170,7 +170,7 @@
 						</div>
 
 						<div class="col-10">
-							<a href="mailto:n.mesegueriborra@um.es" class="link-dark">avishkararjan@gmail.com</a>
+							<a href="mailto:avishkararjan@gmail.com" class="link-dark">avishkararjan@gmail.com</a>
 						</div>
 					</div>
 
@@ -411,7 +411,7 @@
 				<div class="col-md-8 offset-md-1 mb-5" id="publicationsContent">
 					<div class="container">
 						<div class="row mt-2">
-							<h2 class="pub-year-h2">2023</h2>
+							<h2 class="pub-year-h2">2024</h2>
 							{% for item in content.publications %}
 							<div class="pub-block">
 								<div class="lucida-console h5">{{item.title}}</div>
@@ -464,9 +464,10 @@
 				<div class="col-md-8 offset-md-1 mb-5" id="academicContent">
 					<div class="container ">
 						<div class="row mt-2">
-							<h2 class="academic-year-h2">2023</h2>
+							<h2 class="academic-year-h2">2024</h2>
 							
 							{% for item in content.projects reversed %}
+							{% if item.project_time.year == 2024%}
 							<div class="academic-block">
 								<div class="lucida-console h5 academic-name language mt-2"> <span data-en="{{ item.title}}" ></span></div>
 								<div class="academic-rol mt-1 language">  <span data-en="{{item.tech_used}}" ></span></div>
@@ -479,14 +480,30 @@
 								<div class="my-1"><a href="{{item.link_2}}" target="_blank" class="link-dark"><i class="">Official project</i></a></div>
 								{% endif %}
 							</div>
+							{% endif %}
 							{% endfor %}
-
-							<!-- <div class="academic-block mt-4">
-								<div class="lucida-console h5 academic-name language"> <span data-en="Multi-core and Purpose-built Architectures" data-es="Arquitecturas Multinúcleo y de Propósito Específico (AMPE)"></span></div>
-								<div class="academic-rol mt-1 language"><span data-en="Teaching Assistant" data-es="Profesor de Prácticas"></span></div>
-								<div class="academic-year language">3.00 ECTS. <span data-en="February 2023 - June 2023" data-es="Febrero 2023 - Junio 2023"></span></div>
-								<div class="mt-1"><a href="https://twitter.com/AMPE_UMU" target="_blank" class="link-dark"><i class="fa-brands fa-twitter"></i></a></div>
-							</div> -->
+							
+						</div>
+						<div class="row mt-2">
+							<h2 class="academic-year-h2">2023</h2>
+							
+							{% for item in content.projects reversed %}
+							{% if item.project_time.year == 2023%}
+							<div class="academic-block">
+								<div class="lucida-console h5 academic-name language mt-2"> <span data-en="{{ item.title}}" ></span></div>
+								<div class="academic-rol mt-1 language">  <span data-en="{{item.tech_used}}" ></span></div>
+								<div class="academic-rol mt-1 language">  <span data-en="{{ item.project_time|date:"M"}} {{ item.project_time.year}}" ></span></div>
+								<div class="academic-year language"><span data-en="{{ item.details }}"></span></div>
+								{% if item.link_1 %}
+								<div class="my-1"><a href="{{item.link_1}}" target="_blank" class="link-dark"><i class="">My Implementation</i></a></div>
+								{% endif %}
+								{% if item.link_2 %}
+								<div class="my-1"><a href="{{item.link_2}}" target="_blank" class="link-dark"><i class="">Official project</i></a></div>
+								{% endif %}
+							</div>
+							{% endif %}
+							{% endfor %}
+							
 						</div>
 
 						<!-- <div class="row mt-4 language">
@@ -615,7 +632,7 @@
 								¡Si tienes alguna pregunta, necesitas más información, o te gustaría programar una clase inicial, no dudes en ponerte en contacto conmigo!
 								<br><br>
 								
-								Puedes enviarme un mensaje a mi dirección de correo electrónico de trabajo: 📧 <a href="mailto:n.mesegueriborra@um.es" class="link-dark">n.mesegueriborra@um.es</a>.
+								Puedes enviarme un mensaje a mi dirección de correo electrónico de trabajo: 📧 <a href="mailto:avishkararjan@gmail.com" class="link-dark">n.mesegueriborra@um.es</a>.
 								<br><br>
 
 								Si prefieres usar WhatsApp, también puedes enviarme un mensaje al siguiente número: <span class="underline">+34 ??? ?? ?? ??</span>. Por favor, ten en cuenta que este número sólo está disponible para mensajes de WhatsApp. 📱
